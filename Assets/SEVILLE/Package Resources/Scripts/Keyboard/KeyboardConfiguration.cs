@@ -23,6 +23,8 @@ namespace Seville
 
             foreach (InputFieldController inputField in _inputControllerList)
             {
+                Debug.Log(inputField.name);
+                Debug.Log(_keyboardController);
                 inputField.Initialize(_keyboardController);
             }
 
