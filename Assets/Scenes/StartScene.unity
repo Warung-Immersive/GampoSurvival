@@ -1968,7 +1968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areaObjsList: []
-  areaTexture: {fileID: 2800000, guid: 39d4e97701325b44696c2bcf1c5776ee, type: 3}
+  areaTexture: {fileID: 2800000, guid: 1b54a6f82cf39bb408304d589e5c59d2, type: 3}
   isRestartOnExitArea: 0
   firstCamLookRotationValue: 0
   backsound: {fileID: 0}
