@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 namespace Seville
 {
-    public class DoorHandle : UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable
+    public class DoorHandle : XRBaseInteractable
     {
         private const float _switchZone = 0.1f;
         struct TrackedRotation
@@ -51,7 +51,7 @@ namespace Seville
         [SerializeField]
         ValueChangeEvent _onValueChange = new ValueChangeEvent();
 
-        UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor _interactor;
+        IXRSelectInteractor _interactor;
         bool _positionDriven = false;
         bool _upVectorDriven = false;
 

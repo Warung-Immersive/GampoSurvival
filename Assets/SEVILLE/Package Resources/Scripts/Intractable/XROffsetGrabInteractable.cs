@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 namespace Seville
 {
-    public class XROffsetGrabInteractable : UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
+    public class XROffsetGrabInteractable : XRGrabInteractable
     {
         private Vector3 initialLocalPos;
         private Quaternion initialLocalRot;
@@ -27,7 +27,7 @@ namespace Seville
 
         protected override void OnSelectEntered(SelectEnterEventArgs args)
         {
-            if (args.interactorObject is UnityEngine.XR.Interaction.Toolkit.Interactors.XRDirectInteractor)
+            if (args.interactorObject is XRDirectInteractor)
             {
                 attachTransform.localPosition = args.interactorObject.transform.position;
                 attachTransform.localRotation = args.interactorObject.transform.rotation;

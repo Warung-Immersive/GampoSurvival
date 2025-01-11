@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 namespace Seville
 {
-    public class XRGrabInteractableTwoAttach : UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
+    public class XRGrabInteractableTwoAttach : XRGrabInteractable
     {
         public string objName;
         public Transform rightAttachTransform;
@@ -14,7 +14,7 @@ namespace Seville
         public bool isFreezeOnRigidbody;
         [SerializeField] private Rigidbody rb;
 
-        public override Transform GetAttachTransform(UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractor interactor)
+        public override Transform GetAttachTransform(IXRInteractor interactor)
         {
             // Debug.Log("GetAttachTransform");
 

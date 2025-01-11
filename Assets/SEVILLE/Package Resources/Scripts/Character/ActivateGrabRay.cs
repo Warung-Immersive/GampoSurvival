@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.XR.Interaction.Toolkit;
 
 namespace Seville
 {
@@ -10,8 +10,8 @@ namespace Seville
         public GameObject rightGrabRay;
         public GameObject leftGrabRay;
 
-        public UnityEngine.XR.Interaction.Toolkit.Interactors.XRDirectInteractor rightDirectGrab;
-        public UnityEngine.XR.Interaction.Toolkit.Interactors.XRDirectInteractor leftDirectGrab;
+        public XRDirectInteractor rightDirectGrab;
+        public XRDirectInteractor leftDirectGrab;
 
         private void Update()
         {

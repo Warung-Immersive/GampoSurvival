@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
 
 namespace Seville
@@ -17,8 +17,8 @@ namespace Seville
         public InputActionProperty rightCancle;
         public InputActionProperty leftCancle;
 
-        public UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor rightRay;
-        public UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor leftRay;
+        public XRRayInteractor rightRay;
+        public XRRayInteractor leftRay;
 
         private void Update()
         {
