@@ -8,10 +8,11 @@ public class InputUsernameManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI userInput;
     [SerializeField] private List<PopupController> menus;
-
+    
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefsManager.DeleteAll();
         string username = PlayerPrefsManager.GetString("username");
         if (!string.IsNullOrEmpty(username))
         {

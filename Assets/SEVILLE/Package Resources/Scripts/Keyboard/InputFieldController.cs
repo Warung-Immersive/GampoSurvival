@@ -38,7 +38,8 @@ namespace Seville
         {
             _keyboardController = keyboardController;
             submitButton.onClick.AddListener(OnSubmitButton);
-            closeButton.onClick.AddListener(ClosePanel);
+            if (closeButton != null)
+                closeButton.onClick.AddListener(ClosePanel);
 
             for (int i = 0; i < inputFieldList.Count; i++)
             {
