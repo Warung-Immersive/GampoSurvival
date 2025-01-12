@@ -19,7 +19,7 @@ public class AchievementPageManager : MonoBehaviour
     void OnEnable()
     {
         subtitle.text = "Achievement";
-        PlayerPrefsManager.DeleteAll();
+        
         for (int i = 0; i < 4; i++)
         {
             if (PlayerPrefsManager.GetInt("achievement" + (i + 1)) != 0)
