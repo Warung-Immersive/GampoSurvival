@@ -27,7 +27,8 @@ namespace Seville
         private void Start()
         {
             buttonOpenPopup.onClick.AddListener(() => OpenOrClosePopupPanel(true));
-            buttonClosePopup.onClick.AddListener(() => OpenOrClosePopupPanel(false));
+            if (buttonClosePopup != null)
+                buttonClosePopup.onClick.AddListener(() => OpenOrClosePopupPanel(false));
 
             if (popupConfig.isOpenOnStart) OpenOrClosePopupPanel(true);
         }
@@ -41,7 +42,7 @@ namespace Seville
                     if (string.IsNullOrEmpty(popupConfig.GetPopupData().descriptionText) &&
                         popupConfig.GetPopupData().contentSprite == null)
                     {
-                        Debug.LogWarning($"Seville Popup Controller: there is no content data in popup configuration");
+                        Debug.LogWarning("Seville Popup Controller: there is no content data in popup configuration");
                         return;
                     }
                     else popupDataTemp = popupConfig.GetPopupData();
@@ -53,11 +54,16 @@ namespace Seville
                     {
                         buttonOpenPopup.gameObject.SetActive(false);
 
-                        textTitle.text = !string.IsNullOrEmpty(popupDataTemp.titleText) ? popupDataTemp.titleText : "Popup Information";
-                        textSection.SetActive(!string.IsNullOrEmpty(popupDataTemp.descriptionText) ? true : false);
-                        imageSection.SetActive(popupDataTemp.contentSprite != null ? true : false);
-                        textDescription.text = popupDataTemp.descriptionText;
-                        imageContent.sprite = popupDataTemp.contentSprite;
+                        if (textTitle != null)
+                            textTitle.text = !string.IsNullOrEmpty(popupDataTemp.titleText) ? popupDataTemp.titleText : "Popup Information";
+                        if (textSection != null)
+                            textSection.SetActive(!string.IsNullOrEmpty(popupDataTemp.descriptionText));
+                        if (imageSection != null)
+                            imageSection.SetActive(popupDataTemp.contentSprite != null);
+                        if (textDescription != null)
+                            textDescription.text = popupDataTemp.descriptionText;
+                        if (imageContent != null)
+                            imageContent.sprite = popupDataTemp.contentSprite;
                     },
                     () => { }
                 );
