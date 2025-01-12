@@ -3399,7 +3399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &319863352
 Transform:
   m_ObjectHideFlags: 0
@@ -4154,6 +4154,8 @@ GameObject:
   m_Component:
   - component: {fileID: 360003489}
   - component: {fileID: 360003490}
+  - component: {fileID: 360003491}
+  - component: {fileID: 360003492}
   m_Layer: 0
   m_Name: NAVIGATION MENU
   m_TagString: Untagged
@@ -4189,9 +4191,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1e86fb688ef749459b9883fc346019a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetX: 0
+  offsetX: -0.5
   offsetY: 0
-  offsetZ: 1.5
+  offsetZ: 1.4
+--- !u!114 &360003491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360003488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 361d7319c9a827b429498dae601a42b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navigations:
+  - name: Home
+    image: {fileID: 1248155834}
+    page: {fileID: 1220353502}
+  - name: Learn
+    image: {fileID: 2091616919}
+    page: {fileID: 1835779547}
+  - name: Achievement
+    image: {fileID: 1791792578}
+    page: {fileID: 250924483}
+  - name: Credit
+    image: {fileID: 481642911}
+    page: {fileID: 1911781561}
+--- !u!114 &360003492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360003488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2d7d89889b4d94fa1f8d6fe49788e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Target: {fileID: 1693922909}
+  m_TargetOffset: {x: 0, y: 0, z: 0.5}
+  m_FollowInLocalSpace: 0
+  m_ApplyTargetInLocalSpace: 0
+  m_MovementSpeed: 6
+  m_MovementSpeedVariancePercentage: 0.25
+  m_SnapOnEnable: 1
+  m_PositionFollowMode: 0
+  m_MinDistanceAllowed: 0.01
+  m_MaxDistanceAllowed: 0.3
+  m_TimeUntilThresholdReachesMaxDistance: 3
+  m_RotationFollowMode: 1
+  m_MinAngleAllowed: 0.1
+  m_MaxAngleAllowed: 5
+  m_TimeUntilThresholdReachesMaxAngle: 3
 --- !u!1 &365419845
 GameObject:
   m_ObjectHideFlags: 0
@@ -5181,16 +5235,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 481642910}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
-        m_MethodName: Select
-        m_Mode: 1
+      - m_Target: {fileID: 360003491}
+        m_TargetAssemblyTypeName: NavigationMenuManager, Assembly-CSharp
+        m_MethodName: OpenPage
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Credit
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &481642911
@@ -8503,9 +8557,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 737622906}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
-        m_MethodName: Select
+      - m_Target: {fileID: 360003491}
+        m_TargetAssemblyTypeName: NavigationMenuManager, Assembly-CSharp
+        m_MethodName: QuitApplication
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14047,7 +14101,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1248155834}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 360003491}
+        m_TargetAssemblyTypeName: NavigationMenuManager, Assembly-CSharp
+        m_MethodName: OpenPage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Home
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1248155834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17786,16 +17852,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1791792577}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
-        m_MethodName: Select
-        m_Mode: 1
+      - m_Target: {fileID: 360003491}
+        m_TargetAssemblyTypeName: NavigationMenuManager, Assembly-CSharp
+        m_MethodName: OpenPage
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Achievement
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1791792578
@@ -21787,16 +21853,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2091616918}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
-        m_MethodName: Select
-        m_Mode: 1
+      - m_Target: {fileID: 360003491}
+        m_TargetAssemblyTypeName: NavigationMenuManager, Assembly-CSharp
+        m_MethodName: OpenPage
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Learn
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2091616919
