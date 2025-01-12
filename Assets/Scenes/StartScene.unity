@@ -5038,31 +5038,6 @@ MonoBehaviour:
   m_MinAngleAllowed: 0.1
   m_MaxAngleAllowed: 5
   m_TimeUntilThresholdReachesMaxAngle: 3
---- !u!114 &457641219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457641217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 361d7319c9a827b429498dae601a42b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  navigations:
-  - name: Home
-    image: {fileID: 1248155834}
-    page: {fileID: 1220353502}
-  - name: Learn
-    image: {fileID: 2091616919}
-    page: {fileID: 1835779547}
-  - name: Achievement
-    image: {fileID: 1791792578}
-    page: {fileID: 250924483}
-  - name: Credit
-    image: {fileID: 481642911}
-    page: {fileID: 1911781561}
 --- !u!114 &457641220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5168,7 +5143,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1802839938}
         m_TargetAssemblyTypeName: NavigationMenuManager, Assembly-CSharp
         m_MethodName: OpenPage
         m_Mode: 5
@@ -8379,7 +8354,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1802839938}
         m_TargetAssemblyTypeName: NavigationMenuManager, Assembly-CSharp
         m_MethodName: QuitApplication
         m_Mode: 1
@@ -14153,7 +14128,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1802839938}
         m_TargetAssemblyTypeName: NavigationMenuManager, Assembly-CSharp
         m_MethodName: OpenPage
         m_Mode: 5
@@ -14453,7 +14428,19 @@ MonoBehaviour:
   - eventID: 2
     callback:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1802839938}
+          m_TargetAssemblyTypeName: NavigationMenuManager, Assembly-CSharp
+          m_MethodName: OpenPage
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Learn
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1280789877
 GameObject:
   m_ObjectHideFlags: 0
@@ -17781,7 +17768,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1802839938}
         m_TargetAssemblyTypeName: NavigationMenuManager, Assembly-CSharp
         m_MethodName: OpenPage
         m_Mode: 5
@@ -18043,11 +18030,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1652279194836231001, guid: 569f8c337c2d4e64ea57b525c19e1b39,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 457641219}
-    - targetCorrespondingSourceObject: {fileID: 1652279194836231001, guid: 569f8c337c2d4e64ea57b525c19e1b39,
+      addedObject: {fileID: 457641218}
+    - targetCorrespondingSourceObject: {fileID: 5551090942688234704, guid: 569f8c337c2d4e64ea57b525c19e1b39,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 457641218}
+      addedObject: {fileID: 1802839938}
   m_SourcePrefab: {fileID: 100100000, guid: 569f8c337c2d4e64ea57b525c19e1b39, type: 3}
 --- !u!1 &1802839934 stripped
 GameObject:
@@ -18061,6 +18048,31 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1794366993}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1802839938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802839934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 361d7319c9a827b429498dae601a42b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navigations:
+  - name: Home
+    image: {fileID: 1248155834}
+    page: {fileID: 1220353502}
+  - name: Learn
+    image: {fileID: 2091616919}
+    page: {fileID: 1835779547}
+  - name: Achievement
+    image: {fileID: 1791792578}
+    page: {fileID: 250924483}
+  - name: Credit
+    image: {fileID: 481642911}
+    page: {fileID: 1911781561}
 --- !u!1 &1818340752
 GameObject:
   m_ObjectHideFlags: 0
@@ -21949,7 +21961,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1802839938}
         m_TargetAssemblyTypeName: NavigationMenuManager, Assembly-CSharp
         m_MethodName: OpenPage
         m_Mode: 5
