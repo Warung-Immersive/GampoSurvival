@@ -7,7 +7,11 @@ public class PlayerHeartManager : MonoBehaviour
     [SerializeField] private List<Image> hearts;
     private int totalHeart;
     private int currentHeart;
-    
+
+    [SerializeField] private GameObject safeZone;
+    [SerializeField] private GameObject dangerZone;
+
+    [SerializeField] private int level;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -41,10 +45,18 @@ public class PlayerHeartManager : MonoBehaviour
         {
             hearts[currentHeart].color = newColor;
             currentHeart--;
+
+            //if (currentHeart == 0)
+                
         }
         else
         {
             Debug.LogError("Invalid color code");
         }
+    }
+
+    private void PlayLevelOne()
+    {
+
     }
 }
