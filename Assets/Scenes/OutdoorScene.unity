@@ -1094,7 +1094,7 @@ GameObject:
   - component: {fileID: 73953073}
   - component: {fileID: 73953072}
   m_Layer: 0
-  m_Name: Image (1)
+  m_Name: Heart 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1132,7 +1132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.99607843, g: 0.14509805, b: 0.105882354, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1196,6 +1196,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1449794749}
     m_Modifications:
+    - target: {fileID: 983258302443612293, guid: 5f016282cc41fc04da9148599663d410,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1233887723785355388, guid: 5f016282cc41fc04da9148599663d410,
         type: 3}
       propertyPath: isTransitioning
@@ -1366,6 +1371,21 @@ PrefabInstance:
     - target: {fileID: 6214172124671180250, guid: 5f016282cc41fc04da9148599663d410,
         type: 3}
       propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214172124671180250, guid: 5f016282cc41fc04da9148599663d410,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214172124671180250, guid: 5f016282cc41fc04da9148599663d410,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214172124671180250, guid: 5f016282cc41fc04da9148599663d410,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6519573545665214349, guid: 5f016282cc41fc04da9148599663d410,
@@ -1436,27 +1456,27 @@ PrefabInstance:
     - target: {fileID: 8406613341006183775, guid: 5f016282cc41fc04da9148599663d410,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8406613341006183775, guid: 5f016282cc41fc04da9148599663d410,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8406613341006183775, guid: 5f016282cc41fc04da9148599663d410,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 8406613341006183775, guid: 5f016282cc41fc04da9148599663d410,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 615
       objectReference: {fileID: 0}
     - target: {fileID: 8406613341006183775, guid: 5f016282cc41fc04da9148599663d410,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -29
       objectReference: {fileID: 0}
     - target: {fileID: 9011377768165527023, guid: 5f016282cc41fc04da9148599663d410,
         type: 3}
@@ -2392,7 +2412,7 @@ GameObject:
   - component: {fileID: 330060935}
   - component: {fileID: 330060934}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Heart 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2430,7 +2450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.99607843, g: 0.14509805, b: 0.105882354, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5711,7 +5731,7 @@ PrefabInstance:
     - target: {fileID: 5551090942688234704, guid: 569f8c337c2d4e64ea57b525c19e1b39,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5648762731145364752, guid: 569f8c337c2d4e64ea57b525c19e1b39,
         type: 3}
@@ -5777,17 +5797,17 @@ PrefabInstance:
     - target: {fileID: 8306682083935250859, guid: 569f8c337c2d4e64ea57b525c19e1b39,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8306682083935250859, guid: 569f8c337c2d4e64ea57b525c19e1b39,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8306682083935250859, guid: 569f8c337c2d4e64ea57b525c19e1b39,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -5812,6 +5832,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 687832095}
+    - targetCorrespondingSourceObject: {fileID: 5551090942688234704, guid: 569f8c337c2d4e64ea57b525c19e1b39,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1798386125}
   m_SourcePrefab: {fileID: 100100000, guid: 569f8c337c2d4e64ea57b525c19e1b39, type: 3}
 --- !u!1 &635031657
 GameObject:
@@ -10048,7 +10072,7 @@ GameObject:
   - component: {fileID: 1470428747}
   - component: {fileID: 1470428746}
   m_Layer: 0
-  m_Name: Image (2)
+  m_Name: Heart 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10086,7 +10110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.99607843, g: 0.14509805, b: 0.105882354, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11794,6 +11818,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 278421590}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1798386121 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5551090942688234704, guid: 569f8c337c2d4e64ea57b525c19e1b39,
+    type: 3}
+  m_PrefabInstance: {fileID: 629007328}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1798386125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798386121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86a003007f86ec445b280ad8d974d09a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 330060934}
+  - {fileID: 73953072}
+  - {fileID: 1470428746}
 --- !u!1 &1803867170
 GameObject:
   m_ObjectHideFlags: 0
