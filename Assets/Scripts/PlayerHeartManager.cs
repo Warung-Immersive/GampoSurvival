@@ -8,8 +8,7 @@ public class PlayerHeartManager : MonoBehaviour
     private int totalHeart;
     private int currentHeart;
 
-    [SerializeField] private GameObject safeZone;
-    [SerializeField] private GameObject dangerZone;
+    private bool isInSafeZone;
 
     [SerializeField] private int level;
     // Start is called before the first frame update
@@ -45,13 +44,33 @@ public class PlayerHeartManager : MonoBehaviour
         {
             hearts[currentHeart].color = newColor;
             currentHeart--;
-
-            //if (currentHeart == 0)
-                
         }
         else
         {
             Debug.LogError("Invalid color code");
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("SafeZone"))
+        {
+            isInSafeZone = true;
+            Debug.Log("Player entered safe zone");
+        }
+        else if (other.CompareTag("DangerZone"))
+        {
+            isInSafeZone = false;
+            Debug.Log("Player entered danger zone");
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("SafeZone") || other.CompareTag("DangerZone"))
+        {
+            isInSafeZone = false;
+            Debug.Log("Player exited zone");
         }
     }
 
