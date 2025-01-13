@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using Seville;
+using Tproject.AudioManager;
 
 public class TutorialPanelManager : MonoBehaviour
 {
     [SerializeField] private GameObject locomotionSystem;
+    [SerializeField] private AudioManager audioManager;
 
     void OnEnable()
     {
@@ -15,5 +15,6 @@ public class TutorialPanelManager : MonoBehaviour
     void OnDisable()
     {
         locomotionSystem.SetActive(true);
+        audioManager.PlayBackgroundMusic("Earthquake");
     }
 }
