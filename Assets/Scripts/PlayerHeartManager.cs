@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,8 @@ public class PlayerHeartManager : MonoBehaviour
     private int currentHeart;
 
     private bool isInSafeZone;
+    [SerializeField] private GameObject winPanel;
+    [SerializeField] private GameObject losePanel;
 
     [SerializeField] private int level;
     // Start is called before the first frame update
@@ -49,6 +52,9 @@ public class PlayerHeartManager : MonoBehaviour
         {
             Debug.LogError("Invalid color code");
         }
+        
+        if (currentHeart == 0)
+                losePanel.SetActive(true);
     }
 
     void OnTriggerEnter(Collider other)
@@ -74,8 +80,35 @@ public class PlayerHeartManager : MonoBehaviour
         }
     }
 
-    private void PlayLevelOne()
+    public void PlayLevelOne()
     {
+        StartCoroutine(LevelOneSequence());
+    }
 
+    private IEnumerator LevelOneSequence()
+    {
+        yield return new WaitForSeconds(1.3f);
+        if (!isInSafeZone)
+        {
+            PlayerPanic();
+        }
+
+        yield return new WaitForSeconds(3f);
+        if (!isInSafeZone)
+        {
+            PlayerPanic();
+        }
+
+        yield return new WaitForSeconds(4.5f);
+        if (!isInSafeZone)
+        {
+            PlayerPanic();
+        }
+
+        yield return new WaitForSeconds(10f);
+        if (isInSafeZone)
+        {
+            winPanel.SetActive(true);
+        }
     }
 }
