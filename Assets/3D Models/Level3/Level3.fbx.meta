@@ -197,6 +197,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Material.039
+    second: {fileID: 2100000, guid: 798248391465891438e5a3bdd9d56764, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: "\u2014Pngtree\u2014emergency stairs exit_8759931"
     second: {fileID: 2100000, guid: 053fbd2a004f240488ad1fcb1a799c61, type: 2}
   materials:
